@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Giovanni Orlando Rivera">
+    <meta name="description" content="A JavaScript (ES 2015) implementation of the N-Queens 👑 Problem solver.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#009688">
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="N-Queens 👑">
+    <link rel="icon" sizes="192x192" href="/images/icons/icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="N-Queens 👑">
+    <link rel="apple-touch-icon" href="/images/icons/icon-152x152.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="/images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#009688">
+
+    <title>N Queens Problem solver</title>
+    <link rel="stylesheet" href="/dist/styles.css" />
+    <link rel="manifest" href="/manifest.json" />
+    <script defer src="/dist/bundle.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <header class="header">
+        N Queens Problem Solver
+    </header>
+    <main class="content flex-center">
+        <form class="n-queens__form flex-center">
+            <label for="amountOfQueens">Amount of Queens:</label><br>
+            <input type="number" name="amountOfQueens" id="amountOfQueens" value="8" min="1" required />
+            <button class="btn-submit">Submit</button>
+        </form>
+        <div class="n-queens__wrapper"></div>
+
+        <div class="modal flex-center">
+            <div class="modal__content">
+                <button class="btn-close">×</button>
+                <p>N Queens Problem does not have a solution for N=2, or N=3.</p>
+            </div>
+        </div>
+    </main>
+    <script async>
+        //setup SW
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js').then(function() {
+                console.log('SW registered');
+            }).catch(function(e) {
+                console.warn('SW offline');
+            });
+        }
+    </script>
+</body>
+
+</html>
