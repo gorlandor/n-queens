@@ -11,6 +11,9 @@ Install dependencies (assumes node is installed):
 Build dist directory:
 - `$ gulp`
 
+# Demo it
+<https://giovanni0918.github.io/n-queens/>
+
 # Screenshots
 
 8 Queens - iPhone 6 Plus: 0.1499ms
