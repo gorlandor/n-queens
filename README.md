@@ -14,13 +14,16 @@ A JavaScript (ES 2015) implementation of the N-Queens 👑 Problem solver.
 # Screenshots
 
 8 Queens - iPhone 6 Plus: 0.1499ms
-- ![8 Queens - iPhone 6 Plus](images/screenshots/8-queens--iPhone6Plus.png)
+
+![8 Queens - iPhone 6 Plus](images/screenshots/8-queens--iPhone6Plus.png)
 
 12 Queens - Nexus 6p: 0.3350ms
-- ![12 Queens - Nexus 6p](images/screenshots/12-queens--Nexus6p.png)
+
+![12 Queens - Nexus 6p](images/screenshots/12-queens--Nexus6p.png)
 
 32 Queens - iPad Air 2: 91360.1450ms
-- ![32 Queens - iPad Air 2](images/screenshots/32-queens--iPadAir2.png)
+
+![32 Queens - iPad Air 2](images/screenshots/32-queens--iPadAir2.png)
 
 # License
 - MIT: <https://mit-license.org>
