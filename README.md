@@ -20,13 +20,13 @@ Serve locally (assumes php or python is installed):
 
 # Screenshots
 
-8 Queens - iPhone 6 Plus: 0.1499ms
+8 Queens - Nexus 5x: 2.0149ms
 
-![8 Queens - iPhone 6 Plus](images/screenshots/8-queens--iPhone6Plus.png)
+![8 Queens - Nexus 5x](images/screenshots/8-queens--Nexus5x.png)
 
-12 Queens - Nexus 6p: 0.3350ms
+12 Queens - Nexus 6: 3.1399ms
 
-![12 Queens - Nexus 6p](images/screenshots/12-queens--Nexus6p.png)
+![12 Queens - Nexus 6](images/screenshots/12-queens--Nexus6.png)
 
 32 Queens - iPad Air 2: 91360.1450ms
 
