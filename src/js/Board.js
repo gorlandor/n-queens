@@ -24,7 +24,7 @@ class Board {
         for (let i = 0, row = ''; i < this._size; i++, row = '') {
             for (let j = 0; j < this._size; j++) {
                 if (this._coords[i].x === i && this._coords[i].y === j) {
-                    row += 'Q ';
+                    row += '👑 ';
                 } else {
                     row += '_ ';
                 }
