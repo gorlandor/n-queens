@@ -23,10 +23,18 @@ class Board {
         this.container.innerHTML = ``;
         for (let i = 0, row = ''; i < this._size; i++, row = '') {
             for (let j = 0; j < this._size; j++) {
-                if (this._coords[i].x === i && this._coords[i].y === j) {
-                    row += '👑 ';
+                if (i % 2) {
+                    if (this._coords[i].x === i && this._coords[i].y === j) {
+                        row += '👑 ';
+                    } else {
+                        row += (j % 2) ? '⬜ ' : '⬛ ';
+                    }
                 } else {
-                    row += '_ ';
+                    if (this._coords[i].x === i && this._coords[i].y === j) {
+                        row += '👑 ';
+                    } else {
+                        row += (j % 2) ? '⬛ ' : '⬜ ';
+                    }
                 }
             }
             this.container.innerHTML += `<p>${row}</p>`;
