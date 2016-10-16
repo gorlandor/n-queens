@@ -20,6 +20,7 @@ html, body{
   color:white;
   line-height: 56px;
   background: #009688;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
 }
 .content{
   width: 100%;
