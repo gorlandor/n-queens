@@ -11,6 +11,10 @@ Install dependencies (assumes node is installed):
 Build dist directory:
 - `$ gulp`
 
+Serve locally (assumes php or python is installed):
+- `$ php -S localhost:8000`
+- alt: `$ python -m http.server 8000`
+
 # Demo it
 <https://giovanni0918.github.io/n-queens/>
 
