@@ -2,13 +2,13 @@
 A JavaScript (ES 2015) implementation of the N-Queens 👑 Problem solver.
 
 # Usage
-1. Clone repo:
+Clone repo:
 - `$ git clone https://github.com/giovanni0918/n-queens.git`
 
-2. Install dependencies (assumes node is installed):
+Install dependencies (assumes node is installed):
 - `$ npm install`
 
-3. Build dist directory:
+Build dist directory:
 - `$ gulp`
 
 # Screenshots
