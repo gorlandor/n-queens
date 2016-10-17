@@ -20,11 +20,11 @@ Serve locally (assumes php or python is installed):
 
 # Screenshots
 
-8 Queens - Nexus 5x: 2.0149ms
+8 Queens - Nexus 5x: 2.4750ms
 
 ![8 Queens - Nexus 5x](images/screenshots/8-queens--Nexus5x.png)
 
-12 Queens - Nexus 6: 3.1399ms
+12 Queens - Nexus 6: 3.3299ms
 
 ![12 Queens - Nexus 6](images/screenshots/12-queens--Nexus6.png)
 
