@@ -2,6 +2,7 @@ importScripts('/dist/sw-toolbox.js');
 toolbox.options.debug = false;
 
 toolbox.precache([
+    '/n-queens/',
     'index.html',
     'manifest.json',
     'dist/styles.css',
@@ -15,6 +16,7 @@ toolbox.precache([
     'images/icons/icon-384x384.png',
     'images/icons/icon-512x512.png'
 ]);
+toolbox.router.get('/n-queens/', toolbox.fastest);
 toolbox.router.get('index.html', toolbox.fastest);
 toolbox.router.get('dist/styles.css', toolbox.fastest);
 toolbox.router.get('dist/bundle.js', toolbox.fastest);

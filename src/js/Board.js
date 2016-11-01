@@ -37,7 +37,7 @@ class Board {
                     }
                 }
             }
-            this.container.innerHTML += `<p>${row}</p>`;
+            this.container.innerHTML += `<p class="no-margin">${row}</p>`;
         }
     }
 }

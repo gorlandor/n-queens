@@ -1,43 +1,47 @@
-html, body{
+html, body {
   width: 100%;
   height: 100%;
-  margin:0;
+  margin: 0;
   padding: 0;
-  border:0;
+  border: 0;
 }
-.header{
+
+.header {
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   right: 0;
-  width:100%;
-  height:56px;
-  margin:0;
-  padding:0;
+  width: 100%;
+  height: 56px;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  font:1.3em Arial, Helvetica, sans-serif;
+  font: 1.3em Arial, Helvetica, sans-serif;
   font-weight: 700;
-  color:white;
+  color: white;
   line-height: 56px;
   background: #009688;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
 }
-.content{
+
+.content {
   width: 100%;
   height: auto;
   padding-top: 72px;
 }
+
 .flex-center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.n-queens__form{
+
+.n-queens__form {
   width: 80%;
   max-width: 768px;
-  padding:20px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .modal {
@@ -62,6 +66,7 @@ html, body{
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
   font: 1em Arial, Helvetica, sans-serif;
 }
+
 .btn-submit {
   width: 140px;
   margin: 16px;
@@ -69,11 +74,13 @@ html, body{
   border: 0;
   background: #009688;
   color: white;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
-.btn-submit:hover, .btn-submit:active{
+
+.btn-submit:hover, .btn-submit:active {
   background: #00796B;
 }
+
 .btn-close {
   background: transparent;
   color: #009688;
@@ -83,13 +90,16 @@ html, body{
   font-weight: bold;
 }
 
-.btn-close:hover,
-.btn-close:focus {
+.btn-close:hover, .btn-close:focus {
   color: #E91E63;
   text-decoration: none;
   cursor: pointer;
 }
 
-label, input{
-  font:1.3em Arial, Helvetica, sans-serif;
+label, input {
+  font: 1.3em Arial, Helvetica, sans-serif;
+}
+
+.no-margin {
+  margin: 0;
 }
