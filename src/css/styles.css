@@ -103,3 +103,7 @@ label, input {
 .no-margin {
   margin: 0;
 }
+input[type=checkbox]{
+  width: 1em;
+  height: 1em;
+}

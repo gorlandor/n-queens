@@ -24,7 +24,9 @@ class NQueens {
         for (let column = 0; column < n; column++) {
             let isSafe = true;
             for (let queen = 0; queen < row; queen++) {
-                if (positions[queen].y === column || positions[queen].x - positions[queen].y === row - column || positions[queen].x + positions[queen].y === row + column) {
+                if (positions[queen].y === column
+                  || positions[queen].x - positions[queen].y === row - column
+                  || positions[queen].x + positions[queen].y === row + column) {
 
                     isSafe = false;
                     break;
@@ -54,7 +56,15 @@ class NQueens {
                     if (pos.y === j) {
                         buffer.push('👑 ');
                     } else {
-                        buffer.push((j % 2) ? '⬜ ' : '⬛ ');
+                        if (i % 2) {
+                            buffer.push((j % 2)
+                                ? '⬜ '
+                                : '⬛ ');
+                        } else {
+                            buffer.push((j % 2)
+                                ? '⬛ '
+                                : '⬜ ')
+                        }
                     }
                 }
                 oneResult.push(buffer.join(''));

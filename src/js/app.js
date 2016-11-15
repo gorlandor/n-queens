@@ -7,7 +7,8 @@
     const container = document.querySelector('.n-queens__wrapper');
     const modal = document.querySelector('.modal');
     const closeButton = document.querySelector('.btn-close');
-    const time = document.querySelector('.time');
+    const timeToSolve = document.querySelector('.time--solve');
+    const timeToPaint = document.querySelector('.time--paint');
 
     // setup event listeners
     closeButton.onclick = () => modal.style.visibility = 'hidden';
@@ -19,32 +20,28 @@
     let onSubmit = (event) => {
         event.preventDefault();
         let n = Number(input.value);
-        if (n > 8 && checkbox.checked) {
+        if ((n === 2 || n === 3) || (n > 8 && checkbox.checked)) {
             modal.style.visibility = 'visible';
             return;
         }
-        if (n === 2 || n === 3) {
-            modal.style.visibility = 'visible';
-            return;
-        }
-        container.innerHTML = `<p>processing</p>`;
+
         // instanciate a NQueens Problem
         let nQueensProblem = new NQueens();
 
         // begins timer
         let start_time = window.performance.now();
-
+        let solve_time;
         if (checkbox.checked) {
             // scan for all solution
             let positionsArray = nQueensProblem.allSolutions(n);
-
+            solve_time = window.performance.now();
             // prepare Board for paint
             let board = new Board(n, positionsArray);
             board.paint(n);
         } else {
             // scan for one solution
             let positionsArray = nQueensProblem.oneSolution(n);
-
+            solve_time = window.performance.now();
             // prepare Board for paint
             let board = new Board(n, positionsArray);
             board.paint();
@@ -54,9 +51,8 @@
         let end_time = window.performance.now();
 
         // calculate and output the computation's duration in ms
-        let duration = end_time - start_time;
-        time.innerHTML = `${duration} ms`;
-
+        timeToSolve.innerHTML = `${solve_time - start_time} ms`;
+        timeToPaint.innerHTML = `${end_time - start_time} ms`;
     };
     form.addEventListener('submit', onSubmit);
 })(window, document);
