@@ -19,13 +19,12 @@ class NQueens {
         return this._positions;
     }
     oneSolutionUtil(n, row, positions) {
-        if (n === row) return true;
+        if (n === row)
+            return true;
         for (let column = 0; column < n; column++) {
             let isSafe = true;
             for (let queen = 0; queen < row; queen++) {
-                if (positions[queen].y === column ||
-                    positions[queen].x - positions[queen].y === row - column ||
-                    positions[queen].x + positions[queen].y === row + column) {
+                if (positions[queen].y === column || positions[queen].x - positions[queen].y === row - column || positions[queen].x + positions[queen].y === row + column) {
 
                     isSafe = false;
                     break;
@@ -50,36 +49,34 @@ class NQueens {
             let buffer = [];
             let oneResult = [];
 
-            positions.forEach((pos) => {
-                for (let i = 0; i < n; i++) {
-                    if (pos.y === i) {
-                        buffer.push('Q');
+            positions.map((pos, i) => {
+                for (let j = 0; j < n; j++) {
+                    if (pos.y === j) {
+                        buffer.push('👑 ');
                     } else {
-                        buffer.push('.');
+                        buffer.push((j % 2) ? '⬜ ' : '⬛ ');
                     }
-                    oneResult.push(buffer.join(' '));
-                    buffer = [];
                 }
-                result.push(oneResult);
-                return;
+                oneResult.push(buffer.join(''));
+                buffer = [];
             });
-
-            for (let i = 0; i < n; i++) {
-                let isSafe = true;
-                for (let j = 0; j < current; j++) {
-                    if (positions[j].y === i ||
-                        positions[j].y - positions[j].x === i - current ||
-                        positions[j].y + positions[j].x === i + current) {
-                        isSafe = false;
-                        break;
-                    }
-                }
-                if (isSafe) {
-                    positions[current] = new Coordinate(current, i);
-                    this.allSolutionsUtil(current + 1, positions, result, n);
+            result.push(oneResult);
+            return;
+        }
+        for (let i = 0; i < n; i++) {
+            let isSafe = true;
+            for (let j = 0; j < current; j++) {
+                if (positions[j].y === i
+                  || positions[j].y - positions[j].x === i - current
+                  || positions[j].y + positions[j].x === i + current) {
+                    isSafe = false;
+                    break;
                 }
             }
-
+            if (isSafe) {
+                positions[current] = new Coordinate(current, i);
+                this.allSolutionsUtil(current + 1, positions, result, n);
+            }
         }
     }
 }

@@ -3,6 +3,7 @@
     // setup the dom refs
     const form = document.querySelector('form');
     const input = document.querySelector('input');
+    const checkbox = document.querySelector('input[type=checkbox]');
     const container = document.querySelector('.n-queens__wrapper');
     const modal = document.querySelector('.modal');
     const closeButton = document.querySelector('.btn-close');
@@ -18,6 +19,10 @@
     let onSubmit = (event) => {
         event.preventDefault();
         let n = Number(input.value);
+        if (n > 8 && checkbox.checked) {
+            modal.style.visibility = 'visible';
+            return;
+        }
         if (n === 2 || n === 3) {
             modal.style.visibility = 'visible';
             return;
@@ -29,12 +34,21 @@
         // begins timer
         let start_time = window.performance.now();
 
-        // scan for a solution
-        let positionsArray = nQueensProblem.oneSolution(n);
+        if (checkbox.checked) {
+            // scan for all solution
+            let positionsArray = nQueensProblem.allSolutions(n);
 
-        // prepare Board for paint
-        let board = new Board(n, positionsArray);
-        board.paint();
+            // prepare Board for paint
+            let board = new Board(n, positionsArray);
+            board.paint(n);
+        } else {
+            // scan for one solution
+            let positionsArray = nQueensProblem.oneSolution(n);
+
+            // prepare Board for paint
+            let board = new Board(n, positionsArray);
+            board.paint();
+        }
 
         // stops timer
         let end_time = window.performance.now();

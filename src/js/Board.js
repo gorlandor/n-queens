@@ -19,25 +19,36 @@ class Board {
     set coords(coordinates) {
         this._coords = coordinates;
     }
-    paint() {
+    paint(solutions = 1) {
         this.container.innerHTML = ``;
-        for (let i = 0, row = ''; i < this._size; i++, row = '') {
-            for (let j = 0; j < this._size; j++) {
-                if (i % 2) {
-                    if (this._coords[i].x === i && this._coords[i].y === j) {
-                        row += '👑 ';
-                    } else {
-                        row += (j % 2) ? '⬜ ' : '⬛ ';
-                    }
-                } else {
-                    if (this._coords[i].x === i && this._coords[i].y === j) {
-                        row += '👑 ';
-                    } else {
-                        row += (j % 2) ? '⬛ ' : '⬜ ';
-                    }
-                }
-            }
-            this.container.innerHTML += `<p class="no-margin">${row}</p>`;
+        if(solutions === 1){
+          for (let i = 0, row = ''; i < this._size; i++, row = '') {
+              for (let j = 0; j < this._size; j++) {
+                  if (i % 2) {
+                      if (this._coords[i].x === i && this._coords[i].y === j) {
+                          row += '👑 ';
+                      } else {
+                          row += (j % 2) ? '⬜ ' : '⬛ ';
+                      }
+                  } else {
+                      if (this._coords[i].x === i && this._coords[i].y === j) {
+                          row += '👑 ';
+                      } else {
+                          row += (j % 2) ? '⬛ ' : '⬜ ';
+                      }
+                  }
+              }
+              this.container.innerHTML += `<p class="no-margin">${row}</p>`;
+          }
+        }
+        else{
+          console.log(this._coords);
+          this._coords.map((sol) => {
+            sol.map((row) => {
+              this.container.innerHTML += `<p class="no-margin">${row}</p>`;
+            });
+            this.container.innerHTML += `<br>`;
+          });
         }
     }
 }

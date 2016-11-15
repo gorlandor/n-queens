@@ -40,6 +40,7 @@
         <form class="n-queens__form flex-center">
             <label for="amountOfQueens">Amount of Queens:</label><br>
             <input type="number" name="amountOfQueens" id="amountOfQueens" value="8" min="1" required />
+            <label>Solve for n:<input type="checkbox" name="solveForN"></label>
             <button class="btn-submit">Submit</button>
         </form>
         <div><p>Time to solve: <span class="time"></span></p></div>
@@ -49,6 +50,7 @@
             <div class="modal__content">
                 <button class="btn-close">×</button>
                 <p>N Queens Problem does not have a solution for N=2, or N=3.</p>
+                <p>For allSolutionsUtil usage: n <= 8</p>
             </div>
         </div>
     </main>
