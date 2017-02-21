@@ -28,9 +28,9 @@ Serve locally (assumes php or python is installed):
 
 ![12 Queens - Nexus 6](images/screenshots/12-queens--Nexus6.png)
 
-32 Queens - iPad Air 2: 91360.1450ms
+24 Queens - Nexus 9: 406.4049ms
 
-![32 Queens - iPad Air 2](images/screenshots/32-queens--iPadAir2.png)
+![24 Queens - Nexus 9](images/screenshots/24-queens--Nexus9.png)
 
 # License
 - MIT: <https://mit-license.org>
