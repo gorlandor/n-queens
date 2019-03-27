@@ -1,6 +1,8 @@
 # n-queens
 A JavaScript (ES 2015) implementation of the N-Queens 👑 Problem solver.
 
+[![Dependency Status](https://david-dm.org/giovanni0918/react-starter-kit.svg)](https://david-dm.org/giovanni0918/n-queens.svg)
+
 # Usage
 Clone repo:
 - `$ git clone https://github.com/giovanni0918/n-queens.git`
@@ -34,5 +36,5 @@ Serve locally (assumes php or python is installed):
 
 # License
 - MIT: <https://mit-license.org>
-- Copyright 2016: [Giovanni Orlando Rivera](https://github.com/giovanni0918)
-- Website: <http://giovanni-orlando.com>
+- Copyright 2019: [Giovanni Orlando Rivera](https://github.com/giovanni0918)
+- Website: <https://giovanni-orlando.com>
